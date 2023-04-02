@@ -18,7 +18,7 @@ The dataset for this project is a CSV provided by Alphabet Soup’s business tea
 * **STATUS**—Active status
 * **INCOME_AMT**—Income classification
 * **SPECIAL_CONSIDERATIONS**—Special consideration for application
-* **ASK_AMT**—Funding amount requested
+* **ASK_AMT***—Funding amount requested
 * **IS_SUCCESSFUL**—Was the money used effectively
 
 
@@ -57,8 +57,9 @@ Feature Variables for the model:
 ### 2: Compiling, Training, and Evaluating the Model
 
 The first model I built was with:
-2 hidden layers - with and 80, 30 neurone split and the hidden layer activation function as relu, with efficiency in mind for the first go
-Output layer - node is 1 because it was a binary classifier with one output - Whether the funding application was successful or not. The output layer activation was `sigmoid`, because the model produces a binary classification 0-1.
+2 hidden layers - with and 80, 30 neurone split and the hidden layer activation function as `relu`, with efficiency in mind for the first go
+
+Output layer - node is 1 because it was a binary classifier with one output - whether the funding application was successful or not. The output layer activation was `sigmoid`, because the model produces a binary classification 0-1.
 
 The first model created the following loss and accuracy scores:
 <img width="693" alt="Screenshot 2023-04-02 at 15 31 37" src="https://user-images.githubusercontent.com/115706722/229359366-714666d2-b8c7-4153-8020-bc1aabc34d0d.png">
@@ -80,4 +81,4 @@ I experimented with using different activation functions for the hidden layers, 
 # Summary: 
 Despite changing the number of hidden layers, the spread of neurones, the activation functions and the epochs, the accuracy scores for these attempts came blow the 75% threshold. The most successful model was the third attempt.  
 
-If I were to make another attempt with a different model I would go back to the preprocessing stage and re-assess the columns I disclosed. I would experiment with the impact of including those columns in the model and see how the accuracy score changed on this basis.
+If I were to make another attempt with a different model I would go back to the preprocessing stage and re-assess the columns I discluded. I would experiment with the impact of including those columns in the model and see how the accuracy score changed on this basis.
