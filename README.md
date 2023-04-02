@@ -26,11 +26,14 @@ The dataset for this project is a CSV provided by Alphabet Soup’s business tea
 
 ### 1: Preprocessing the data
 * I first verified that the dataset has no null or duplicate values 
-![Screenshot 2022-08-06 at 22 20 24](https://user-images.githubusercontent.com/67019030/183266401-f3e86c8b-d0e3-4b15-98d0-bc14dc4028e4.png)
-
 
 
 * I established a cutoff point for values outside of the normal categorical variables and created an ‘Other’ bin to store these. This process was completed for `CLASSIFICATION` and `APPLICATION_TYPE` columns.
+<img width="1324" alt="Screenshot 2023-04-02 at 15 32 42" src="https://user-images.githubusercontent.com/115706722/229359440-ec17a610-c031-4dd7-b12f-3f8b5c28e4d0.png">
+
+* **EIN** and **NAME**— Columns that are not targets or features are removed from the data
+
+<img width="689" alt="Screenshot 2023-04-02 at 13 36 32" src="https://user-images.githubusercontent.com/115706722/229359755-df267b45-dd7d-4d55-9758-3d19e8a5c88b.png">
 
 Target Variable for the model: 
 * **IS_SUCCESSFUL**
@@ -49,7 +52,6 @@ Feature Variables for the model:
 * **IS_SUCCESSFUL**
 
 
-* **EIN** and **NAME**— Columns that are not targets or features are removed from the data
 
 
 ### 2: Compiling, Training, and Evaluating the Model
@@ -59,6 +61,7 @@ The first model I built was with:
 Output layer - node is 1 because it was a binary classifier with one output - Whether the funding application was successful or not. The output layer activation was `sigmoid`, because the model produces a binary classification 0-1.
 
 The first model created the following loss and accuracy scores:
+<img width="693" alt="Screenshot 2023-04-02 at 15 31 37" src="https://user-images.githubusercontent.com/115706722/229359366-714666d2-b8c7-4153-8020-bc1aabc34d0d.png">
 
 
 2nd Attempt:
@@ -66,10 +69,13 @@ The first model created the following loss and accuracy scores:
 
 This model had a slight increase in accuracy score from 0.7202… to 0.7213…
 
+<img width="780" alt="Screenshot 2023-04-02 at 15 31 01" src="https://user-images.githubusercontent.com/115706722/229359329-6efef9bb-c1f6-415b-a94e-e045ebd805ae.png">
 
 3rd Attempt:
 I experimented with using different activation functions for the hidden layers, increasing the number of epochs. This was successful and increased the accuracy score to the highest yet, as seen below.
 
+<img width="960" alt="Screenshot 2023-04-02 at 14 54 09" src="https://user-images.githubusercontent.com/115706722/229359234-8776648c-fe68-4cb5-a9a1-c5fc391a6aed.png">
+<img width="727" alt="Screenshot 2023-04-02 at 15 30 13" src="https://user-images.githubusercontent.com/115706722/229359289-30941b59-4ea0-49ed-86cc-01226e166203.png">
 
 # Summary: 
 Despite changing the number of hidden layers, the spread of neurones, the activation functions and the epochs, the accuracy scores for these attempts came blow the 75% threshold. The most successful model was the third attempt.  
