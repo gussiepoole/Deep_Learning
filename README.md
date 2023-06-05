@@ -1,11 +1,10 @@
-# Deep_Learning
-
-# Report on the Neural Network Model
-
+# Deep_Learning - Report on the Neural Network Model
 
 ## Project Overview:
 
 This project is aimed at providing the nonprofit foundation Alphabet Soup a tool to help select applicants for funding with the best chance of success in their ventures. Using knowledge of ML and neural networks I will use features provided in the dataset to create a binary classifier that is able to predict whether applicants will be successful if funded by Alphabet Soup.
+
+## Dataset
 
 The dataset for this project is a CSV provided by Alphabet Soup’s business team containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. It also contains numerous columns that capture metadata about each organization, such as:
 
@@ -22,9 +21,9 @@ The dataset for this project is a CSV provided by Alphabet Soup’s business tea
 * **IS_SUCCESSFUL**—Was the money used effectively
 
 
-# Process
+## Process
 
-### 1: Preprocessing the data
+### Preprocessing the data
 * I first verified that the dataset has no null or duplicate values 
 
 
@@ -52,9 +51,10 @@ Feature Variables for the model:
 * **IS_SUCCESSFUL**
 
 
+Finally I split and scaled the data: 
+<img width="913" alt="Screenshot 2023-06-05 at 10 23 10" src="https://github.com/gussiepoole/Deep_Learning/assets/115706722/34a25fca-54c7-4637-9fca-d92501d155d1">
 
-
-### 2: Compiling, Training, and Evaluating the Model
+### Compiling, Training, and Evaluating the Model
 
 The first model I built was with:
 2 hidden layers - with and 80, 30 neurone split and the hidden layer activation function as `relu`, with efficiency in mind for the first go
@@ -78,7 +78,7 @@ I experimented with using different activation functions for the hidden layers, 
 <img width="960" alt="Screenshot 2023-04-02 at 14 54 09" src="https://user-images.githubusercontent.com/115706722/229359234-8776648c-fe68-4cb5-a9a1-c5fc391a6aed.png">
 <img width="727" alt="Screenshot 2023-04-02 at 15 30 13" src="https://user-images.githubusercontent.com/115706722/229359289-30941b59-4ea0-49ed-86cc-01226e166203.png">
 
-# Summary: 
+## Summary: 
 Despite changing the number of hidden layers, the spread of neurones, the activation functions and the epochs, the accuracy scores for these attempts came blow the 75% threshold. The most successful model was the third attempt.  
 
 If I were to make another attempt with a different model I would go back to the preprocessing stage and re-assess the columns I discluded. I would experiment with the impact of including those columns in the model and see how the accuracy score changed on this basis.
